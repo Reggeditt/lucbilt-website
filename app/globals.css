@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 38 92% 50%;  /* Amber primary */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 38 92% 50%;  /* Amber accent */
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 38 92% 50%;  /* Amber ring */
+    --chart-1: 38 92% 50%;  /* Amber chart-1 */
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 38 92% 50%;  /* Amber primary */
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 38 62% 40%;  /* Darker amber accent */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 38 92% 50%;  /* Amber ring */
+    --chart-1: 38 92% 50%;  /* Amber chart-1 */
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Custom scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.greenmode {
+    /* Pakistan Green (first set) */
+    --pakistan-green: 18 32% 13%; /* #124015 */
+    --pakistan-green-100: 120 44% 2%; /* #040d04 */
+    --pakistan-green-200: 120 44% 5%; /* #071908 */
+    --pakistan-green-300: 120 44% 9%; /* #0b260d */
+    --pakistan-green-400: 120 44% 13%; /* #0e3311 */
+    --pakistan-green-500: 120 44% 15%; /* #124015 */
+    --pakistan-green-600: 120 56% 33%; /* #25822b */
+    --pakistan-green-700: 120 56% 50%; /* #38c541 */
+    --pakistan-green-800: 120 44% 66%; /* #79d980 */
+    --pakistan-green-900: 120 44% 87%; /* #bcecbf */
+    /* Pakistan Green (second set) */
+    --pakistan-green2: 133 47% 18%; /* #17461C */
+    --pakistan-green2-100: 133 47% 3%; /* #040e05 */
+    --pakistan-green2-200: 133 47% 7%; /* #091c0b */
+    --pakistan-green2-300: 133 47% 10%; /* #0d2a10 */
+    --pakistan-green2-400: 133 47% 15%; /* #123716 */
+    --pakistan-green2-500: 133 47% 18%; /* #17461c */
+    --pakistan-green2-600: 133 49% 35%; /* #2b8434 */
+    --pakistan-green2-700: 133 51% 43%; /* #42c24e */
+    --pakistan-green2-800: 133 47% 69%; /* #81d689 */
+    --pakistan-green2-900: 133 47% 87%; /* #c0ebc4 */
+    /* Uranian Blue */
+    --uranian-blue: 208 74% 85%; /* #BCDCF6 */
+    --uranian-blue-100: 208 74% 16%; /* #0a2f4c */
+    --uranian-blue-200: 208 74% 34%; /* #155d99 */
+    --uranian-blue-300: 208 74% 51%; /* #238ce1 */
+    --uranian-blue-400: 208 74% 68%; /* #6fb4eb */
+    --uranian-blue-500: 208 74% 85%; /* #bcdcf6 */
+    --uranian-blue-600: 208 74% 88%; /* #c9e3f8 */
+    --uranian-blue-700: 208 74% 91%; /* #d7eaf9 */
+    --uranian-blue-800: 208 74% 94%; /* #e4f1fb */
+    --uranian-blue-900: 208 74% 97%; /* #f2f8fd */
+    /* Example usage for background/foreground */
+    --background: var(--pakistan-green2);
+    --foreground: var(--uranian-blue-100);
+    --primary: var(--pakistan-green2-700);
+    --primary-foreground: var(--uranian-blue-900);
+    --secondary: var(--pakistan-green2-600);
+    --secondary-foreground: var(--uranian-blue-900);
+    --accent: var(--uranian-blue-400);
+    --accent-foreground: var(--pakistan-green2-900);
+    --muted: var(--pakistan-green2-100);
+    --muted-foreground: var(--uranian-blue-200);
+    --border: var(--pakistan-green2-400);
+    --input: var(--pakistan-green2-300);
+    --ring: var(--uranian-blue-300);
+    --radius: 0.5rem;
+  }
